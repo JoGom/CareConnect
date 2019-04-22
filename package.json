@@ -31,16 +31,16 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethantatum/Project-Three.git"
+    "url": "git+https://github.com/JoGom/CareConnect.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ethantatum/Project-Three/issues"
+    "url": "https://github.com/JoGom/CareConnect/issues"
   },
-  "homepage": "https://github.com/ethantatum/Project-Three#readme"
+  "homepage": "https://github.com/JoGom/CareConnect#readme"
 }
