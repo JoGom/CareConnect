@@ -12,6 +12,7 @@
     "if-env": "^1.0.4",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
     "mongoose": "^5.5.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
@@ -36,12 +37,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoGom/CareConnect.git"
+    "url": "git+https://github.com/ethantatum/Project-Three.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JoGom/CareConnect/issues"
+    "url": "https://github.com/ethantatum/Project-Three/issues"
   },
-  "homepage": "https://github.com/JoGom/CareConnect#readme"
+  "homepage": "https://github.com/ethantatum/Project-Three#readme",
+  "keywords": []
 }

@@ -10,169 +10,199 @@ mongoose.connect(
 
 const studentSeed = [
     {
-        name: "Alivia Kane",
-        age: 12,
+        firstname: "Alivia",
+        lastname: "Kane",
         image: "/assets/images/girl1.png",
-        class: "Burgundy",
-        // parents: [
-        //     {
-        //         parent1: ""
-        //     }
-        // ],
         behaviors: [
             {
-                behavior1: "spitting"
+                behavior: "Spitting",
+                type: "negative"
             },
             {
-                behavior2: "elopement"
+                behavior: "Elopement",
+                type: "negative"
+            },
+            {
+                behavior: "Property Destruction",
+                type: "negative"
+            },
+            {
+                behavior: "Responding to Demand",
+                type: "positive"
             }
         ]
     },
     {
-        name: "Ellis Liu",
-        age: 7,
+        firstname: "Ellis",
+        lastname: "Liu",
         image: "/assets/images/boy1.png",
-        class: "Paisley",
-        // parents: [
-        //     {
-        //         parent1: "Allyson Liu"
-        //     },
-        //     {
-        //         parent2: "Henry Liu"
-        //     }
-        // ],
         behaviors: [
             {
-                behavior1: "yelling"
+                behavior: "Hitting",
+                type: "negative"
+            },
+            {        
+                behavior: "Scratching",
+                type: "negative"
+            },
+            {
+                behavior: "Biting",
+                type: "negative"
+            },
+            {
+                behavior: "Yelling",
+                type: "negative"
+            },
+            {
+                behavior: "Self Injury",
+                type: "negative"
+            },
+            {
+                behavior: "Making a Request",
+                type: "positive"
+            },
+            {
+                behavior: "Responding to Demand",
+                type: "positive"
+            },
+            {
+                behavior: "Answering a Question",
+                type: "positive"
             }
+
         ]
     },
     {
-        name: "Elly Navarro",
-        age: 6,
+        firstname: "Elly",
+        lastname: "Navarro",
         image: "/assets/images/girl2.png",
-        class: "Paisley",
-        // parents: [
-        //     {
-        //         parent1: "Noelle Navarro"
-        //     },
-        //     {
-        //         parent2: "Emilio Navarro"
-        //     }
-        // ],
         behaviors: [
             {
-                behavior1: "biting"
+                behavior: "Yelling",
+                type: "negative"
             },
             {
-                behavior2: "spitting"
+                behavior: "Responding to Demand",
+                type: "positive"
             },
             {
-                behavior3: "hitting"
+                behavior: "Talking to Peer",
+                type: "positive"
             }
         ]
     },
     {
-        name: "Matthew Humphreys",
-        age: 5,
+        firstname: "Matthew", 
+        lastname: "Humphreys",
         image: "/assets/images/boy2.png",
-        class: "Paisley",
-        // parents: [
-        //     {
-        //         parent1: "Megan Humphreys"
-        //     }
-        // ],
         behaviors: [
             {
-                behavior1: "rocking"
-            }
-        ]
-    },
-    {
-        name: "Reema Spears",
-        age: 10,
-        image: "/assets/images/girl3.png",
-        class: "Emerald",
-        // parents: [
-        //     {
-        //         parent1: "Coretta Spears"
-        //     },
-        //     {
-        //         parent2: "Marvin Spears"
-        //     }
-        // ],
-        behaviors: [
-            {
-                behavior1: "throwing"
-            }
-        ]
-    },
-    {
-        name: "Dean Reed",
-        age: 9,
-        image: "/assets/images/boy3.png",
-        class: "Emerald",
-        // parents: [
-        //     {
-        //         parent1: "Jonathan Reed"
-        //     }
-        // ],
-        behaviors: [
-            {
-                behavior1: "rocking"
+                behavior: "Hitting",
+                type: "negative"
             },
             {
-                behavior2: "flapping"
+                behavior: "Kicking",
+                type: "negative"
+            },
+            {
+                behavior: "Elopement",
+                type: "negative"
+            },
+            {
+                behavior: "Yelling",
+                type: "negative"
+            },
+            {
+                behavior: "Making a Request",
+                type: "positive"
+            },
+            {
+                behavior: "Responding to Demand",
+                type: "positive"
             }
         ]
     },
     {
-        name: "Melody Nguyen",
-        age: 13,
-        image: "/assets/images/girl4.png",
-        class: "Burgundy",
-        // parents: [
-        //     {
-        //         parent1: "Trang Nguyen"
-        //     },
-        //     {
-        //         parent2: "Duy Nguyen"
-        //     }
-        // ],
+        firstname: "Reema",
+        lastname: "Spears",
+        image: "/assets/images/girl3.png",
         behaviors: [
             {
-                behavior1: "biting"
+                behavior: "Making a Request",
+                type: "positive"
+            },
+            {
+                behavior: "Responding to Demand",
+                type: "positive"
+            },
+            {
+                behavior: "Answering a Question",
+                type: "positive"
+            },
+            {
+                behavior: "Talking to Peer",
+                type: "positive"
+            }
+        ]
+    },
+    {
+        firstname: "Dean",
+        lastname: "Reed",
+        image: "/assets/images/boy3.png",
+        behaviors: [
+            {
+                behavior: "Scratching",
+                type: "negative"
+            },
+            {
+                behavior: "Biting",
+                type: "negative"
+            },
+            {
+                behavior: "Self Injury",
+                type: "negative"
+            },
+            {
+                behavior: "Responding to Demand",
+                type: "positive"
+            }
+        ]
+    },
+    {
+        firstname: "Melody",
+        lastname: "Nguyen",
+        image: "/assets/images/girl4.png",
+        behaviors: [
+            {
+                behavior: "Spitting",
+                type: "negative"
             }, 
             {
-                behavior2: "hitting"
+                behavior: "Elopement",
+                type: "negative"
             },
             {
-                behavior3: "scratching"
+                behavior: "Yelling",
+                type: "negative"
             },
             {
-                behavior4: "throwing"
+                behavior: "Responding to Demand",
+                type: "positive"
             }
         ]
     },
     {
-        name: "Zakariah Joseph",
-        age: 9,
+        firstname: "Zakariah",
+        lastname: "Joseph",
         image: "/assets/images/boy4.png",
-        class: "Emerald",
-        // parents: [
-        //     {
-        //         parent1: "Vonda Joseph"
-        //     },
-        //     {
-        //         parent2: "Floyd Joseph"
-        //     }
-        // ],
         behaviors: [
             {
-                behavior1: "scratching"
+                behavior: "Elopement",
+                type: "negative"
             },
             {
-                behavior2: "biting"
+                behavior: "Responding to Demand",
+                type: "positive"
             }
         ]
     }

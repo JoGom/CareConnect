@@ -1,5 +1,6 @@
 import React from 'react';
 import NavSideButton from '../NavSideButton';
+import logo from '../../../LandingComponents/Logo/images/logo2w.png';
 import './style.css';
 
 
@@ -11,15 +12,15 @@ const NavToolbar = props => (
                 <NavSideButton click={props.clickHandler} />
             </div>
             <div className="toolbar-logo">
-                {<img src={require('../../../LandingComponents/Logo/images/logo2b.png')} alt="logo" />}
+                {<img src={logo} alt="logo" />}
             </div>
             <div className="spacer"></div>
             <div className="toolbar-items">
                 <ul>
-                    <li><h4>Welcome {props.user}</h4></li>
+                    <li><h6 className="mt-1 welcome-user">{props.user}</h6></li>
                 </ul>
                 <ul>
-                    <li><a className="h4" href="/" onClick={props.logoutClick}>Log Out</a></li>
+                    <li><a className="h4 float-right" href="/" onClick={props.logoutClick}>Log Out</a></li>
                 </ul>
             </div>
         </nav>

@@ -1,6 +1,9 @@
 #landing {
     position: absolute;
-    height: 100%;
     top: 0;
     bottom: 0;
+}
+
+.front-page {
+    background-color:rgb(61, 60, 60);
 }

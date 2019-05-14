@@ -7,7 +7,9 @@ const messageSchema = new Schema ({
     messageBody: { type: String, required: true },
     messageTo: { type: String, required: true },
     messageFrom: { type: String, required: true },
-    time: Date
+    positiveMessage: {type: Boolean, default: false},
+    negativeMessage: {type: Boolean, default: false},
+    time: {type: Date}
 });
 
 const Message = mongoose.model("Message", messageSchema);

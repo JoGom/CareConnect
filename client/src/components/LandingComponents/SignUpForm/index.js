@@ -26,7 +26,13 @@ class SignUpForm extends Component {
     componentDidMount() {
         // If logged in and user navigates to Register page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
-          this.props.history.push("/dashboard");
+            if(this.props.auth.user.isTeacher){
+                this.props.history.push("/dashboard/classes");
+            }
+            else{
+                this.props.history.push("/dashboard/students");
+            }   
+            // this.props.history.push("/dashboard");
         }
       }
 
@@ -101,7 +107,7 @@ class SignUpForm extends Component {
 
         return (
             <div className="SignUp col-12">
-                <div className="container-fluid p-3">
+                <div className="p-3">
                     <Logo />
                     <form className="ui inverted segment" onSubmit={this.handleSubmit}>
                         <div className="ui inverted left icon input">

@@ -21,13 +21,23 @@ class Login extends Component {
     componentDidMount() {
         // If logged in and user navigates to Login page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
-          this.props.history.push("/dashboard");
+            if(this.props.auth.user.isTeacher){
+                this.props.history.push("/dashboard/classes");
+            }
+            else{
+                this.props.history.push("/dashboard/students");
+            }   
         }
     }
     //===========Redux=================
     componentWillReceiveProps(nextProps) {
         if (nextProps.auth.isAuthenticated) {
-          this.props.history.push("/dashboard"); // push user to dashboard when they login
+         if(nextProps.auth.user.isTeacher){
+                this.props.history.push("/dashboard/classes");
+            }
+            else{
+                this.props.history.push("/dashboard/students");
+            }   
         }
         if (nextProps.errors) {
           this.setState({
@@ -56,7 +66,6 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password
         };
-        console.log(userData);
         this.props.loginUser(userData);
     };
 
@@ -64,7 +73,7 @@ class Login extends Component {
         const { errors } = this.state;
         return (
             <div className="Login col-12">
-                <div className="container-fluid p-3">
+                <div className="p-3">
                     <Logo />
                     <form className="ui inverted segment" onSubmit={this.handleSubmit}>
                         <div className="ui inverted left icon input">
@@ -88,7 +97,7 @@ class Login extends Component {
                         <div className="ui inverted divider"></div>
                         <div className="ui inverted left icon input">
                             <input
-                                type="text"
+                                type="password"
                                 placeholder="Password"
                                 value={this.state.password}
                                 onChange={this.handleChange}
@@ -99,13 +108,12 @@ class Login extends Component {
                                 // })}
                             />
                             <i className="lock icon"></i>
-                            <span>
+                            <span className="red-text">
                             {errors.password}
                             {errors.passwordincorrect}
                             </span>
                         </div>
                         <div className="ui inverted divider"></div>
-                        <div>{errors.passwordincorrect}</div>
                         <button className="ui inverted button" type="submit" disabled={!this.validateForm()}>Login</button>
                         <button className="ui inverted red button" type="submit" onClick={this.props.handleLogin}>Cancel</button>
                     </form>
